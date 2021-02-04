@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="manifest" href="/manifest.json">
   <link rel="icon" href="favicon.ico" type="image/x-icon" />  
   <link rel="apple-touch-icon" href="assets/pwa-icon.png">   
   <meta name="theme-color" content="white"/>  
@@ -15,10 +14,9 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="theme-color" content="#317EFB">
   <link rel="shortcut icon" href="icons/icon-192x192.png" type="image/x-icon">
-
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="styles.css">
-
+  <link rel="manifest" href="/manifest.json">
   <title>Budget Tracker</title>
 </head>
 <body>
@@ -51,22 +49,23 @@
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-  <script src="index.js"></script>
+  <script src="./index.js"></script>
+  
   <script>
    
 
     // load serviceworker when page loaded
 
- indexInit();
+//  indexInit();
 
-    window.onload = function(){
-      if (navigator.serviceWorker)
-      navigator.serviceWorker.register('/serviceworker.js');
+//     window.onload = function(){
+//       if (navigator.serviceWorker)
+//       navigator.serviceWorker.register('/serviceworker.js');
 
-      window.addEventListener('online', updateOnlineStatus);
-      window.addEventListener('online', updateOnlineStatus);
-    updateOnlineStatus();
-    }
+//       window.addEventListener('online', updateOnlineStatus);
+//       window.addEventListener('online', updateOnlineStatus);
+//     updateOnlineStatus();
+//     }
 
 
   </script>

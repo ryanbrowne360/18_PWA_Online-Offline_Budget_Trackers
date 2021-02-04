@@ -1,5 +1,15 @@
 const { model } = require("../models/transaction");
 
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/serviceworker.js')
+      .then((reg) => {
+        console.log('Service worker registered.', reg);
+      });
+  });
+}
+
+
 let transactions = [];
 let myChart;
 
