@@ -1,13 +1,13 @@
 /* Start the service worker and cache all of the app's content. This step is all I need to change in this boiler plate code*/
 const FILES_TO_CACHE = [
     '/',
-    '/public\index.html',
-    '/public\icons\icon-192x192.png',
-    '/public\index.js',
-    '/public\manifest.json',
-    '/public\styles.css',
-    '/models\transaction.js',
-    '/routes\api.js',
+    '/public/index.html',
+    '/public/icons/icon-192x192.png',
+    '/public/index.js',
+    '/public/manifest.json',
+    '/public/styles.css',
+    '/models/transaction.js',
+    '/routes/api.js',
     '/package.json',
     '/server.js',
   ];

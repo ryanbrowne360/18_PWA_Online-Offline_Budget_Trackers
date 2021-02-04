@@ -1,5 +1,3 @@
-const { model } = require("../models/transaction");
-
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
     navigator.serviceWorker.register('/serviceworker.js')
@@ -8,6 +6,25 @@ if ('serviceWorker' in navigator) {
       });
   });
 }
+
+
+function updateOnlineStatus(event){
+  const isOnline = navigator.onLine==true || navigator.onLine==='online'
+  const el = document.querySelectorAll('.online-only');
+  for( let i=0; i<el.length; i++ ){
+      if( isOnline ){
+          el[i].classList.remove("appear-offline");
+      } else {
+          el[i].classList.add("appear-offline");
+      }
+  }
+}
+window.onload = function(){
+  window.addEventListener('online',  updateOnlineStatus);
+  window.addEventListener('offline', updateOnlineStatus);
+  updateOnlineStatus();
+}
+
 
 
 let transactions = [];
